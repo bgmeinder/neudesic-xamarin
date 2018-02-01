@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Text.RegularExpressions;
 using Android.Content;
 using Android.OS;
 using Android.Support.Design.Widget;
 using Android.Views;
 using Android.Widget;
 using Neudesic.Core.Models;
+using Neudesic.Core.Services;
 
 namespace Neudesic.Android.Fragments
 {
@@ -15,18 +15,6 @@ namespace Neudesic.Android.Fragments
         /// The fragment listener.
         /// </summary>
         private IFragmentListener fragmentListener;
-
-        /// <summary>
-        /// Regex pattern to ensure password must consist of a mixture of letters and numerical digits only, 
-        /// with at least one of each.
-        /// </summary>
-        private const string AlphaNumericPattern = @"^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9]+$";
-
-        /// <summary>
-        /// Regex pattern to ensure password must not contain any sequence of characters immediately 
-        /// followed by the same sequence.
-        /// </summary>
-        private const string RepeatingPattern = @"^.*(?<grp>[a-z0-9]+)(\k<grp>).*$";
 
         /// <summary>
         /// The first name.
@@ -228,26 +216,22 @@ namespace Neudesic.Android.Fragments
                     confirmPassword.Error = GetString(Resource.String.mismatch_password_error);
                     isValid = false;
                 }
-                else 
+
+                var validationResult = SecurityService.ValidatePasswordRules(passwordText);
+                if (validationResult != SecurityService.ValidationResult.valid)
                 {
-                    var alphaNumericRegex = new Regex(AlphaNumericPattern);
-                    var repeatingRegex = new Regex(RepeatingPattern);
-                    if (!alphaNumericRegex.IsMatch(passwordText)) {
-                        passwordLayout.ErrorEnabled = true;
-                        password.Error = GetString(Resource.String.password_alpha_numeric_error);
-                        isValid = false;
-                    }
-                    else if (repeatingRegex.IsMatch(passwordText)) 
-                    {
-                        passwordLayout.ErrorEnabled = true;
-                        password.Error = GetString(Resource.String.password_sequence_error);
-                        isValid = false;
-                    }
-                    else if (passwordText.Length < 5 || passwordText.Length > 12) 
-                    {
-                        passwordLayout.ErrorEnabled = true;
-                        password.Error = GetString(Resource.String.password_length_error);
-                        isValid = false;
+                    isValid = false;
+                    passwordLayout.ErrorEnabled = true;
+                    switch (validationResult) {
+                        case SecurityService.ValidationResult.length:
+                            passwordLayout.Error = GetString(Resource.String.password_length_error);
+                            break;
+                        case SecurityService.ValidationResult.alphaNumeric:
+                            passwordLayout.Error = GetString(Resource.String.password_alpha_numeric_error);
+                            break;
+                        case SecurityService.ValidationResult.sequence:
+                            passwordLayout.Error = GetString(Resource.String.password_sequence_error);
+                            break;
                     }
                 }
             }
