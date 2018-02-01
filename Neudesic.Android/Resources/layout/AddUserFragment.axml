@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true">
+        <TextView
+            android:text="@string/create_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="16dp" />
+        <android.support.design.widget.TextInputLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/usernameLayout">
+            <android.support.design.widget.TextInputEditText
+                android:hint="@string/username_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/username"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/firstNameLayout">
+            <android.support.design.widget.TextInputEditText
+                android:hint="@string/first_name_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/firstName"
+                android:inputType="textPersonName" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lastNameLayout">
+            <android.support.design.widget.TextInputEditText
+                android:hint="@string/last_name_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lastName"
+                android:inputType="textPersonName" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordLayout">
+            <android.support.design.widget.TextInputEditText
+                android:hint="@string/password_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/password"
+                android:inputType="textPassword" />
+            <TextView
+                android:text="@string/password_requirements"
+                android:id="@+id/passwordRequirementsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="8dp"
+                android:layout_alignParentLeft="true" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/confirmPasswordLayout">
+            <android.support.design.widget.TextInputEditText
+                android:hint="@string/confirm_password_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/confirmPassword"
+                android:inputType="textPassword" />
+        </android.support.design.widget.TextInputLayout>
+        <Button
+            android:text="@string/save"
+            android:background="?android:attr/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/saveUserButton"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:textColor="#fff" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/userImageView" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+            <TextView
+                android:text="@string/username_label"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/userNameLabel"
+                android:textAlignment="textEnd" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/userNameText" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+            <TextView
+                android:text="@string/first_name_label"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/firstNameLabel"
+                android:textAlignment="textEnd" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/firstNameText" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+            <TextView
+                android:text="@string/last_name_label"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/lastNameLabel"
+                android:textAlignment="textEnd" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lastNameText" />
+        </LinearLayout>
+        <Button
+            android:text="@string/delete"
+            android:background="?android:attr/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/deleteUserButton"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:textColor="#fff" />
+    </LinearLayout>
+</ScrollView>

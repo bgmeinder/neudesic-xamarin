@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+       android:id="@+id/menu_list"
+       android:icon="@drawable/menuList"
+       android:showAsAction="ifRoom"
+       android:title="List" />
+  <item
+       android:id="@+id/menu_add"
+       android:icon="@drawable/menuAdd"
+       android:showAsAction="ifRoom"
+       android:title="Add" />
+</menu>

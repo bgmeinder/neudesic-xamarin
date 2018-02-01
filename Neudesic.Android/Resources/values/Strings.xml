@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Neudesic</string>
+    <string name="all_users">All Users</string>
+    <string name="add_user">Add User</string>
+    <string name="username_label">Username:</string>
+    <string name="username_error">Please enter a username</string>
+    <string name="first_name_label">First Name:</string>
+    <string name="first_name_error">Please enter a first name</string>
+    <string name="last_name_label">Last Name:</string>
+    <string name="last_name_error">Please enter a last name</string>
+    <string name="password_label">Password:</string>
+    <string name="password_error">Please enter a password</string>
+    <string name="confirm_password_label">Confirm Password:</string>
+    <string name="confirm_password_error">Please confirm your password</string>
+    <string name="password_requirements">Password must be between 5-12 characters, contain only letter or numbers, contain one of each, and cannot repeat any sequence of characters</string>
+    <string name="mismatch_password_error">Your password entries do not match</string>
+    <string name="password_alpha_numeric_error">Password can contain only letters and numbers and must contain one of each</string>
+    <string name="password_sequence_error">Password cannot repeat any sequence of characters</string>
+    <string name="password_length_error">Password must be between 5-12 characters</string>
+    <string name="user_detail_title">User Detail</string>
+    <string name="create_user">Create User</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+</resources>
