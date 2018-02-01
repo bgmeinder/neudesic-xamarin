@@ -18,7 +18,7 @@ namespace Neudesic.Core.Services
         /// Regex pattern to ensure password must not contain any sequence of characters immediately 
         /// followed by the same sequence.
         /// </summary>
-        private const string SequencePattern = @"^.*(?<grp>[a-z0-9]+)(\k<grp>).*$";
+        private const string SequencePattern = @"(.+)(?=\1+)";
 
         /// <summary>
         /// Enum for Validating Password rules

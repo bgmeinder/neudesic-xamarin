@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neudesic.Core", "Neudesic.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neudesic.Android", "Neudesic.Android\Neudesic.Android.csproj", "{0190151F-AB5D-430F-A0AC-F6FF99055E0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neudesic.Core.Tests", "Neudesic.Core.Tests\Neudesic.Core.Tests.csproj", "{7E2D9E3E-F72E-4E17-A0C0-9D0B33B410FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +21,9 @@ Global
 		{0190151F-AB5D-430F-A0AC-F6FF99055E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0190151F-AB5D-430F-A0AC-F6FF99055E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0190151F-AB5D-430F-A0AC-F6FF99055E0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E2D9E3E-F72E-4E17-A0C0-9D0B33B410FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E2D9E3E-F72E-4E17-A0C0-9D0B33B410FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E2D9E3E-F72E-4E17-A0C0-9D0B33B410FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E2D9E3E-F72E-4E17-A0C0-9D0B33B410FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
