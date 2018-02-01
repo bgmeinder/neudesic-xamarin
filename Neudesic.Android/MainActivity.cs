@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using Android.Content.PM;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
@@ -6,7 +7,8 @@ using Neudesic.Android.Fragments;
 
 namespace Neudesic.Android
 {
-    [Activity(Label = "@string/app_name", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "@string/app_name", MainLauncher = true, Icon = "@drawable/icon",
+              ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize | ConfigChanges.KeyboardHidden)]
     public class MainActivity : Activity, IFragmentListener
     {
         protected override void OnCreate(Bundle savedInstanceState)

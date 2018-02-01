@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
         <android.support.design.widget.TextInputLayout
             android:minWidth="25px"
             android:minHeight="25px"
@@ -72,7 +72,8 @@
                 android:id="@+id/passwordRequirementsText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="8dp"
+                android:textSize="8sp"
+                android:padding="5dp"
                 android:layout_alignParentLeft="true" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
